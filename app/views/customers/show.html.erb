@@ -1,0 +1,10 @@
+<h1>Customer <%= @customer.first_name %> <%= @customer.last_name %></h1>
+		ORDERS: <p>
+	<% if @customer.orders.any? %>
+		<% @customer.orders.each do |order| %>
+		<p>	ID: <%= link_to order.id, order_path(order) %> - Price: <%= number_with_precision order.price, :precision => 2 %></p>
+		<% end %>
+		<% else %>
+		None
+	<% end%>
+</p>

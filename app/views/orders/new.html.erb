@@ -1,0 +1,14 @@
+<% provide(:title, 'New Order') %>
+<h1>New Order</h1>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(@order) do |f| %>
+      <%= f.label :price %>
+      <%= f.text_field :price %>
+      <%= f.label :customer_id %>
+      <%= f.text_field :customer_id %>
+      <%= f.submit "Create New Order", class: "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+</div>
